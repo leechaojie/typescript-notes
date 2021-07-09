@@ -35,7 +35,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      inject: 'body'
+      inject: 'body',
     }),
 
     new ESLintPlugin({

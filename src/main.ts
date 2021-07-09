@@ -1,24 +1,9 @@
-class User {
-    fullName: string
-    firstName: string
-    lastName: string
-  
-    constructor(firstName: string, lastName: string) {
-      this.firstName = firstName
-      this.lastName = lastName
-      this.fullName = firstName + ' ' + lastName
-    }
-  }
-  
-  interface Person {
-    firstName: string
-    lastName: string
-  }
-  
-  function greeter(person: Person) {
-    return 'Hello, ' + person.firstName + ' ' + person.lastName
-  }
-  
-  let user = new User('Yee', 'Huang')
-  
-  console.log(greeter(user))
+/**
+ * webpack + ts
+ * https://huaxhe.gitee.io/vue3_study_docs/
+ */
+
+// import './01_基础类型'
+// import './02_接口'
+// import './03_函数类型'
+import './04_类的类型'
