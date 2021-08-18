@@ -3,7 +3,7 @@
  */
 
 // Boolean
-let flag:boolean = true
+let flag: boolean = true
 
 // Number
 let a1: number = 10 // 十进制
@@ -19,7 +19,7 @@ let u: undefined = undefined
 let n: null = null
 
 // Array
-let arr1: number[] = [1,2,3]
+let arr1: number[] = [1, 2, 3]
 let arr2: Array<number> = [1, 2, 3] // <>范型
 
 // 元组类型
@@ -54,7 +54,7 @@ function showMsg(): void {
 console.log(showMsg()); // undefined 没有返回值，所以是undefined
 
 // Object
-function getObj(obj:object): object {
+function getObj(obj: object): object {
     console.log(obj);
     return {
         name: 'lee',
@@ -69,7 +69,7 @@ console.log('返回值', resultObj);
 // 联合类型
 
 // 需求1 定义一个函数得到一个数字或字符串值的字符串形式值
-function getString(str:number|string): string {
+function getString(str: number | string): string {
     console.log('参数', str);
     return str.toString()
 }
@@ -78,7 +78,7 @@ console.log('联合类型返回值', getString('123'));
 
 // 需求2 定义一个函数得到一个数字或字符串值的长度
 // <> 或者 as
-function getLen(str:number|string): number {
+function getLen(str: number | string): number {
     // return str.toString().length // 不合理，str 本身就是 string 类型时，没有必要调用 toString()
     if ((<string>str).length) { // 类型断言。告诉编译器什么类型  使用<>
         // return (<string>str).length

@@ -24,11 +24,11 @@ interface ISwim {
 class Person2 implements IFly, ISwim {
   fly() {
     console.log('实现fly');
-    
+
   }
   swim() {
     console.log('实现swim');
-    
+
   }
 }
 const p2 = new Person2
@@ -36,11 +36,11 @@ p2.fly()
 p2.swim()
 
 // 接口可以继承其他多个接口
-interface IMyFlyAndSwim extends IFly, ISwim {}
+interface IMyFlyAndSwim extends IFly, ISwim { }
 
 // 定义一个类，实现 IMyFlyAndSwim
 class Person3 implements IMyFlyAndSwim {
-  fly() {}
-  swim() {}
+  fly() { }
+  swim() { }
 }
 const p3 = new Person3()
