@@ -12,4 +12,7 @@
 // import './类/02_继承'
 // import './类/03_多态'
 // import './类/04_修饰符'
-import './类/05_readonly修饰符'
+// import './类/05_readonly修饰符'
+// import './类/06_存取器'
+// import './类/07_静态成员'
+import './类/08_抽象类'
