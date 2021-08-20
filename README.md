@@ -7,6 +7,7 @@ Spare time typescript study notes
 ```bash
 yarn install
 ```
+
 ## run
 
 ```bash
