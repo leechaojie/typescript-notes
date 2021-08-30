@@ -8,7 +8,8 @@
 (() => {
   // 抽象类，可以有抽象方法与实例方法
   abstract class Animal {
-    abstract name: string = '无双' // 抽象属性子类无法使用
+    // abstract name: string = '无双' // 抽象属性子类无法使用
+    abstract name: string // 抽象属性子类无法使用
     // abstract eat() {} // 方法“eat”不能具有实现，因为它标记为抽象
     
     // 实例方法

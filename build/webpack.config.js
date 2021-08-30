@@ -51,8 +51,10 @@ module.exports = {
 
   devServer: {
     host: 'localhost', // 主机名
-    stats: 'errors-only', // 打包日志输出输出错误信息
     port: 8088,
     open: true,
+    devMiddleware: {
+      stats: 'errors-only', // 打包日志输出输出错误信息
+    },
   },
 };
