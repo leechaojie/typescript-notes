@@ -4,59 +4,59 @@
  */
 
 (() => {
-    class Animal {
-        name: string
-        constructor(name: string) {
-            this.name = name
-        }
-        run(distance: number = 0) {
-            const run = `${this.name}跑了${distance}米`
-            console.log(run);
-        }
-    }
-    class Dog extends Animal {
-        constructor(name: string) {
-            super(name)
-        }
-        run(distance: number = 5) {
-            const run = `${this.name}小狗跑了${distance}米`
-            console.log(run);
-        }
-    }
-    class Pig extends Animal {
-        constructor(name: string) {
-            super(name)
-        }
-        run(distance: number = 10) {
-            const run = `${this.name}小猪跑了${distance}米`
-            console.log(run);
-        }
-    }
+	class Animal {
+		name: string
+		constructor(name: string) {
+			this.name = name
+		}
+		run(distance: number = 0) {
+			const run = `${this.name}跑了${distance}米`
+			console.log(run);
+		}
+	}
+	class Dog extends Animal {
+		constructor(name: string) {
+			super(name)
+		}
+		run(distance: number = 5) {
+			const run = `${this.name}小狗跑了${distance}米`
+			console.log(run);
+		}
+	}
+	class Pig extends Animal {
+		constructor(name: string) {
+			super(name)
+		}
+		run(distance: number = 10) {
+			const run = `${this.name}小猪跑了${distance}米`
+			console.log(run);
+		}
+	}
 
-    const ani: Animal = new Animal('动物！')
-    ani.run()
+	const ani: Animal = new Animal('动物！')
+	ani.run()
 
-    const dog: Dog = new Dog('小狗！')
-    dog.run()
+	const dog: Dog = new Dog('小狗！')
+	dog.run()
 
-    const pig: Pig = new Pig('佩奇！')
-    pig.run()
+	const pig: Pig = new Pig('佩奇！')
+	pig.run()
 
-    console.log('--------------');
+	console.log('--------------');
 
-    // 父类和子类的关系:父子关系，此时，父类类型创建子类的对象
-    const dog1: Animal = new Dog('大黄-')
-    dog1.run()
+	// 父类和子类的关系:父子关系，此时，父类类型创建子类的对象
+	const dog1: Animal = new Dog('大黄-')
+	dog1.run()
 
-    const pig1: Animal = new Pig('小猪-')
-    pig1.run()
+	const pig1: Animal = new Pig('小猪-')
+	pig1.run()
 
-    console.log('--------------');
+	console.log('--------------');
 
-    // 该函数的参数类型是 Animal
-    function showRun(ani: Animal) {
-        ani.run()
-    }
-    showRun(dog)
-    showRun(pig1)
+	// 该函数的参数类型是 Animal
+	function showRun(ani: Animal) {
+		ani.run()
+	}
+	showRun(dog)
+	showRun(pig1)
 })()
