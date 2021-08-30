@@ -20,7 +20,7 @@ let n: null = null
 
 // Array
 let arr1: number[] = [1, 2, 3]
-let arr2: Array<number> = [1, 2, 3] // <>范型
+let arr2: Array<number> = [1, 2, 3]
 
 // 元组类型
 let arr3: [string, number, boolean] = ['1', 123, true]
