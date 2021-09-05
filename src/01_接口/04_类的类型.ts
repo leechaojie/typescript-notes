@@ -4,7 +4,7 @@
 
 interface IFly {
   // 该方法没有任何实施（方法里什么都没有）
-  fly(): any;
+  fly(): void;
 }
 
 class Person implements IFly {
@@ -17,7 +17,7 @@ p.fly();
 
 // 定义一个接口
 interface ISwim {
-  swim(): any
+  swim(): void
 }
 
 // 一个类，可以实现多个接口
