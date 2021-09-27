@@ -1,7 +1,3 @@
-interface IItems<T> {
-  [key: number]: T
-}
-
 /**
  * 栈
  */
