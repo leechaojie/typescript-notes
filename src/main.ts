@@ -31,4 +31,5 @@
 // import './05_声明文件/01_声明文件.ts'
 // import './05_声明文件/02_内置对象.ts'
 
-import './06_数据结与算法/stack.ts'
+// import './06_数据结与算法/01-栈/stack.ts'
+import './06_数据结与算法/02-队列/queue.ts'
