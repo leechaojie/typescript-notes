@@ -17,8 +17,8 @@
 		name: string
 		age: number
 		constructor(name: string, age: number) {
-			this.name = name
-			this.age = age
+		  this.name = name
+		  this.age = age
 		}
 	}
 
@@ -29,24 +29,24 @@
 		public data: Array<User> = []
 		// 存储用户信息对象
 		add(user: User): User {
-			// 产生id
-			user.id = Date.now() + Math.random()
-			// 用户信息对象添加到数组中
-			this.data.push(user)
-			return user
+		  // 产生id
+		  user.id = Date.now() + Math.random()
+		  // 用户信息对象添加到数组中
+		  this.data.push(user)
+		  return user
 		}
 		// 根据id查询指定的用户信息对象
 		getUserId(id: number): User {
-			const user = this.data.find(item => item.id === id)
-			if (user) {
-				return user
-			} else {
-				return {
-					id: NaN,
-					name: 'undefined',
-					age: NaN,
-				}
-			}
+		  const user = this.data.find(item => item.id === id)
+		  if (user) {
+		    return user
+		  } else {
+		    return {
+		      id: NaN,
+		      name: 'undefined',
+		      age: NaN
+		    }
+		  }
 		}
 	}
 
@@ -58,9 +58,9 @@
 	userCRUD.add(new User('天下', 14))
 	userCRUD.add(new User('无贼', 15))
 
-	console.log(userCRUD.data);
+	console.log(userCRUD.data)
 
-	console.log(userCRUD.getUserId(13));
+	console.log(userCRUD.getUserId(13))
 
 
 

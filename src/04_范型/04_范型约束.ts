@@ -5,9 +5,9 @@
 
 (() => {
 
-	// function getLen<T>(x: T): number {
-	// 	return x.length  // 报错 类型“T”上不存在属性“length”。
-	// }
+  // function getLen<T>(x: T): number {
+  // 	return x.length  // 报错 类型“T”上不存在属性“length”。
+  // }
 
 
 	// 定义一个接口约束
@@ -16,9 +16,9 @@
 	}
 
 	function getLength<T extends ILength>(x: T): number {
-		return x.length
+	  return x.length
 	}
 
-	console.log(getLength<string>('123456'));
+	console.log(getLength<string>('123456'))
 
 })()
