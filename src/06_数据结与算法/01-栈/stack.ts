@@ -1,7 +1,7 @@
 /**
  * 栈
  */
-class Stack<T> {
+export default class Stack<T> {
   private count: number
   private items: IItems<T>
   constructor() {
@@ -87,5 +87,5 @@ const stack = new Stack()
 stack.push(1)
 stack.push(2)
 stack.push(3)
-console.log(stack.toString());
-console.log(stack.peek());
+console.log(stack.toString())
+console.log(stack.peek())

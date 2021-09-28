@@ -1,7 +1,7 @@
 /**
  * 队列
  */
-class Queue<T> {
+export default class Queue<T> {
   private count: number // 队列大小
   private items: IItems<T> // 队列的元素
   private lowestCount: number // 追踪队列第一个元素

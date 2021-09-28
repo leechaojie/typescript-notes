@@ -1,7 +1,7 @@
 /**
  * 双端队列 deque double-ended queue
  */
-class Deque<T> {
+export default class Deque<T> {
   private count: number
   private lowestCount: number
   private items: IItems<T>
