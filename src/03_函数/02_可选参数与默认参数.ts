@@ -3,7 +3,7 @@
  */
 
 (() => {
-  const getFullName = function (firstName: string = '无双', lastName?: string): string {
+  const getFullName = function(firstName: string = '无双', lastName?: string): string {
     if (lastName) {
       return firstName + '_' + lastName
     } else {
@@ -11,6 +11,6 @@
     }
   }
 
-  console.log(getFullName());
+  console.log(getFullName())
 
 })()

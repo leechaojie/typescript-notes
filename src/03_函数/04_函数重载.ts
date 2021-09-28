@@ -18,8 +18,8 @@
       return 'err'
     }
   }
-  console.log(add('1', '2'));
-  console.log(add(1, 2));
+  console.log(add('1', '2'))
+  console.log(add(1, 2))
   // console.log(add('1', 2)); // 报错 没有与此调用匹配的重载。
 
 
