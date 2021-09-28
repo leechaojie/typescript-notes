@@ -17,23 +17,23 @@
     public get fullName(): string {
       return this.firstName + '_' + this.lastName
     }
-    
+
     // 设置器
     public set fullName(v : string) {
       const names = v.split('_')
-      this.firstName = names[0];
-      this.lastName = names[1];
+      this.firstName = names[0]
+      this.lastName = names[1]
     }
-    
+
 
     say() {
       return this.firstName + '_' + this.lastName
     }
-    
+
   }
   const person: Person = new Person('无双', '大蛇')
-  console.log('---', person);
-  console.log('===', person.fullName); 
+  console.log('---', person)
+  console.log('===', person.fullName)
   person.fullName = '诸葛_孔明'
-  console.log('=-=', person.fullName); 
+  console.log('=-=', person.fullName)
 })()

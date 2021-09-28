@@ -14,50 +14,50 @@
 		_age: number
 		_gender: string
 		constructor({
-			name,
-			age,
-			gender
+		  name,
+		  age,
+		  gender
 		}: IPerson) {
-			this._name = name
-			this._age = age
-			this._gender = gender
+		  this._name = name
+		  this._age = age
+		  this._gender = gender
 		}
 		// 定义实例方法
 		seyHi(str: string) {
-			const hi = `hello, 我是${this._name},我今年${this._age},我的性别是${this._gender}, ${str}`
-			console.log(hi);
+		  const hi = `hello, 我是${this._name},我今年${this._age},我的性别是${this._gender}, ${str}`
+		  console.log(hi)
 		}
 	}
 
 	class Student extends Person {
-		constructor({
-			name,
-			age,
-			gender
-		}: IPerson) {
-			// 调用父类构造函数
-			super({
-				name,
-				age,
-				gender
-			})
-		}
-		seyHi(str: string) {
-			// 调用父类中的方法
-			super.seyHi(str)
-		}
+	  constructor({
+	    name,
+	    age,
+	    gender
+	  }: IPerson) {
+	    // 调用父类构造函数
+	  	super({
+	      name,
+	      age,
+	      gender
+	    })
+	  }
+	  seyHi(str: string) {
+	    // 调用父类中的方法
+	    super.seyHi(str)
+	  }
 	}
 	const person = new Person({
-		name: 'lee',
-		age: 16,
-		gender: '男'
+	  name: 'lee',
+	  age: 16,
+	  gender: '男'
 	})
 	person.seyHi('ok')
 
 	const student = new Student({
-		name: 'lucy',
-		age: 16,
-		gender: '女'
+	  name: 'lucy',
+	  age: 16,
+	  gender: '女'
 	})
 	student.seyHi('OK')
 })()

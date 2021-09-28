@@ -14,7 +14,7 @@
       this.name = name
     }
     public eat() {
-      console.log('eat',this.name);
+      console.log('eat', this.name)
     }
   }
 
@@ -23,17 +23,17 @@
       super(name)
     }
     play() {
-      console.log('子类', this.name);
-      
+      console.log('子类', this.name)
+
     }
   }
 
   const per = new Person('大蛇')
-  console.log('---', per.name);
+  console.log('---', per.name)
   per.eat()
 
   const st = new Student('小蛇')
-  console.log('===', st.name);
-  
+  console.log('===', st.name)
+
   st.play()
 })()

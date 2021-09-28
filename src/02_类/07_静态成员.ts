@@ -16,13 +16,13 @@
     }
 
     static sayHi(): void {
-      console.log('hello', Person.name);
+      console.log('hello', Person.name)
 
     }
 
   }
 
   Person.firstName = '大蛇'
-  console.log('===', Person.firstName);
+  console.log('===', Person.firstName)
   Person.sayHi()
 })()

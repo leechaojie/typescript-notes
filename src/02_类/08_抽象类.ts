@@ -11,11 +11,11 @@
     // abstract name: string = '无双' // 抽象属性子类无法使用
     abstract name: string // 抽象属性子类无法使用
     // abstract eat() {} // 方法“eat”不能具有实现，因为它标记为抽象
-    
+
     // 实例方法
     sayHi(): void {
-      console.log('hello');
-      
+      console.log('hello')
+
     }
 
   }
@@ -24,8 +24,8 @@
   class Dog extends Animal {
     name: string = '大蛇'
     eat() {
-      console.log('Dog---');
-      
+      console.log('Dog---')
+
     }
   }
 
@@ -35,5 +35,5 @@
   const dog = new Dog()
   dog.eat()
   dog.sayHi()
-  console.log(dog.name);
+  console.log(dog.name)
 })()
