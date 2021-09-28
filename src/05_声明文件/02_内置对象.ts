@@ -5,12 +5,12 @@
 (() => {
 
   /* 1. ECMAScript 的内置对象 */
-  let b: Boolean = new Boolean(1)
-  let n: Number = new Number(true)
-  let s: String = new String('abc')
-  let d: Date = new Date()
-  let r: RegExp = /^1/
-  let e: Error = new Error('error message')
+  const b: Boolean = new Boolean(1)
+  const n: Number = new Number(true)
+  const s: String = new String('abc')
+  const d: Date = new Date()
+  const r: RegExp = /^1/
+  const e: Error = new Error('error message')
   // b = true
   // console.log(b);
   // let bb: boolean = new Boolean(2)  // error
@@ -24,8 +24,8 @@
   })
 
   // console.log('div', div);
-  console.log('allDiv', 'allDiv');
-  
+  console.log('allDiv', 'allDiv')
+
   const fragment: DocumentFragment = document.createDocumentFragment()
 
 })()
