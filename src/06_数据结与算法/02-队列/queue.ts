@@ -13,14 +13,14 @@ class Queue<T> {
 
   /**
    * 队列尾部添加元素
-   * @param element 
+   * @param element
    */
   public enqueue(element: T) {
     this.items[this.count] = element
     this.count++
   }
 
-  
+
   /**
    * :移除队列的第一项
    */
@@ -47,7 +47,7 @@ class Queue<T> {
 
   /**
    * 检查队列是否为空
-   * @returns 
+   * @returns
    */
   public isEmpty(): boolean {
     return this.count - this.lowestCount === 0
@@ -55,7 +55,7 @@ class Queue<T> {
 
   /**
    * 返回队列包含的元素个数
-   * @returns 
+   * @returns
    */
   public size(): number {
     return this.count - this.lowestCount
@@ -86,9 +86,9 @@ const queue = new Queue()
 queue.enqueue('one')
 queue.enqueue('two')
 queue.enqueue('three')
-console.log('isEmpty', queue.isEmpty());
-console.log('toString', queue.toString());
-console.log('peek', queue.peek());
-console.log('size', queue.size());
-console.log('dequeue', queue.dequeue());
-console.log('toString', queue.toString());
+console.log('isEmpty', queue.isEmpty())
+console.log('toString', queue.toString())
+console.log('peek', queue.peek())
+console.log('size', queue.size())
+console.log('dequeue', queue.dequeue())
+console.log('toString', queue.toString())
