@@ -1,6 +1,6 @@
 # typescript-notes
 
-Spare time typescript study notes
+Spare time TypeScript and  JavaScript Data Structures and Algorithms study notes
 
 ## install
 
@@ -11,5 +11,5 @@ yarn install
 ## run
 
 ```bash
-yarn run start
+yarn start
 ```
