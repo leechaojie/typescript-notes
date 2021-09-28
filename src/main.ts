@@ -3,6 +3,7 @@
  * https://huaxhe.gitee.io/vue3_study_docs/
  */
 
+console.log(`%c${process.env.NODE_ENV}`, 'color: #fff; background-color: #347981; padding: 2px 5px')
 // import './01_接口/01_基础类型'
 // import './01_接口/02_接口'
 // import './01_接口/03_函数类型'
