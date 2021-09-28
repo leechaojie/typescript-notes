@@ -58,7 +58,7 @@ class Queue<T> {
    * @returns 
    */
   public size(): number {
-    return this.count
+    return this.count - this.lowestCount
   }
 
   /**
