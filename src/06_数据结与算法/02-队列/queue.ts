@@ -22,7 +22,8 @@ class Queue<T> {
 
 
   /**
-   * :移除队列的第一项
+   * 移除队列的第一项
+   * @returns
    */
   public dequeue(): T | undefined {
     if (this.isEmpty()) {
