@@ -1,23 +1,22 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path')
 
-const isProd = process.env.NODE_ENV === 'production'; // 是否生产环境
+const isProd = process.env.NODE_ENV === 'production' // 是否生产环境
 
 function resolve(dir) {
-  return path.resolve(__dirname, '..', dir);
+  return path.resolve(__dirname, '..', dir)
 }
 
 module.exports = {
   mode: isProd ? 'production' : 'development',
   entry: {
-    app: './src/main.ts',
+    app: './src/main.ts'
   },
 
   output: {
     path: resolve('dist'),
-    filename: 'js/[name].[contenthash:8].js',
+    filename: 'js/[name].[contenthash:8].js'
   },
 
   module: {
@@ -25,9 +24,9 @@ module.exports = {
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        include: [resolve('src')],
-      },
-    ],
+        include: [resolve('src')]
+      }
+    ]
   },
 
   plugins: [
@@ -35,16 +34,13 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      inject: 'body',
-    }),
+      inject: 'body'
+    })
 
-    new ESLintPlugin({
-      fix: true,
-    }),
   ],
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js']
   },
 
   devtool: isProd ? 'cheap-module-source-map' : 'eval-cheap-source-map',
@@ -54,7 +50,7 @@ module.exports = {
     port: 8088,
     open: true,
     devMiddleware: {
-      stats: 'errors-only', // 打包日志输出输出错误信息
-    },
-  },
-};
+      stats: 'errors-only' // 打包日志输出输出错误信息
+    }
+  }
+}
