@@ -9,11 +9,11 @@ interface IFly {
 
 class Person implements IFly {
   fly() {
-    console.log("实现了");
+    console.log("实现了")
   }
 }
-const p = new Person();
-p.fly();
+const p = new Person()
+p.fly()
 
 // 定义一个接口
 interface ISwim {
@@ -23,11 +23,11 @@ interface ISwim {
 // 一个类，可以实现多个接口
 class Person2 implements IFly, ISwim {
   fly() {
-    console.log('实现fly');
+    console.log('实现fly')
 
   }
   swim() {
-    console.log('实现swim');
+    console.log('实现swim')
 
   }
 }

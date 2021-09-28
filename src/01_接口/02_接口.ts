@@ -18,12 +18,12 @@ interface IPerson {
     sex?: string // ？可有可无
 }
 const person: IPerson = {
-    id: 1,
-    name: 'lee',
-    age: 16,
-    sex: '男'
+  id: 1,
+  name: 'lee',
+  age: 16,
+  sex: '男'
 }
 
-console.log(person);
+console.log(person)
 
 
