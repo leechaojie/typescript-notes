@@ -83,7 +83,7 @@ export default class Queue<T> {
   }
 }
 
-const queue = new Queue()
+const queue:Queue<string> = new Queue()
 queue.enqueue('one')
 queue.enqueue('two')
 queue.enqueue('three')
