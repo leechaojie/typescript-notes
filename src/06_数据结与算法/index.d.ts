@@ -4,3 +4,8 @@
 interface IItems<T> {
   [key: number]: T
 }
+
+interface IHotPotato<T> {
+  eliminated: Array,
+  winner: T | undefined
+}
