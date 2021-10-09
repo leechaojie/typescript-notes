@@ -17,12 +17,12 @@ export default class LinkedList<T> {
   public push(element: T): void {
     const node: Node<T> = new Node(element)
     let current: Node<T> | undefined
-    if (this.head === undefined || this.head === null) {
+    if (this.head === undefined) {
       this.head = node
     } else {
       current = this.head
       // 获得最后一项
-      while (current?.next !== null) {
+      while (current?.next !== undefined) {
         current = current?.next
       }
       // 将其 next 赋为新元素，建立链接
