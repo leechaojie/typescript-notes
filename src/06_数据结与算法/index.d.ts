@@ -9,3 +9,7 @@ interface IHotPotato<T> {
   eliminated: Array,
   winner: T | undefined
 }
+
+interface IEqualsFunction<T> {
+  (a: T, b: T): boolean
+}
