@@ -34,4 +34,5 @@ console.log(`%c${process.env.NODE_ENV}`, 'color: #fff; background-color: #347981
 
 // import './06_数据结与算法/01-栈/stack.ts'
 // import './06_数据结与算法/02-队列/queue.ts'
-import './06_数据结与算法/02-队列/deque.ts'
+// import './06_数据结与算法/02-队列/deque.ts'
+import './06_数据结与算法/02-队列/example.ts'
