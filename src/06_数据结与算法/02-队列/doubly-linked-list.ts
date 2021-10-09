@@ -1,4 +1,3 @@
-import { get } from 'jquery'
 import { defaultEquals } from '../util'
 import LinkedList from './linked-list'
 import { DoublyNode } from './models/linked-list-models'
