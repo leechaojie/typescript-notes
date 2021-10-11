@@ -152,6 +152,14 @@ export default class LinkedList<T> {
   }
 
   /**
+   * 清空链表
+   */
+  public clear() {
+    this.head = undefined
+    this.count = 0
+  }
+
+  /**
    * 将链表对象转换成字符串
    */
   public toString(): string {
