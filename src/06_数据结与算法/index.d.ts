@@ -5,6 +5,13 @@ interface IItems<T> {
   [key: number]: T
 }
 
+/**
+ * 集合
+ */
+interface ISetItems<T> {
+  [key: T]: T
+}
+
 interface IHotPotato<T> {
   eliminated: Array,
   winner: T | undefined
