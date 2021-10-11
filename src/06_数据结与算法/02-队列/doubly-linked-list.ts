@@ -12,6 +12,23 @@ export default class DoublyLinkedList<T> extends LinkedList<T> {
     super(equalsFn)
   }
 
+  /**
+   * 向链表尾部添加一个新元素
+   * @param element 新元素
+   */
+  public push(element: T): void {
+    const node = new DoublyNode(element)
+    if (this.head === undefined) {
+      this.head = node
+      this.tail = node
+    } else {
+      (this.tail as DoublyNode<T>).next = node
+      node.prev = this.tail
+      this.tail = node
+    }
+    this.count++
+  }
+
 
   /**
    * 双向链表任意位置插入元素
@@ -80,6 +97,22 @@ export default class DoublyLinkedList<T> extends LinkedList<T> {
       return current?.element
     }
     return undefined
+  }
+
+  /**
+   * 获取链表尾部元素
+   * @returns
+   */
+  public getTail() {
+    return this.tail
+  }
+
+  /**
+   * 清空双向链表
+   */
+  public clear() {
+    super.clear()
+    this.tail = undefined
   }
 
 
