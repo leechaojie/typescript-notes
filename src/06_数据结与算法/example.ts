@@ -2,8 +2,8 @@
  * 例子
  */
 
-import Queue from "./queue"
-import Deque from "./deque"
+import Queue from "./02-队列/queue"
+import Deque from "./02-队列/deque"
 
 /**
  * 击鼓传花

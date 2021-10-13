@@ -1,6 +1,6 @@
 import { defaultEquals } from '../util'
 import LinkedList from './linked-list'
-import { DoublyNode } from './models/linked-list-models'
+import { DoublyNode } from '../models/linked-list-models'
 
 /**
  * 双向链表

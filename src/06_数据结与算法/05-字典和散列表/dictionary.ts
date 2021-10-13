@@ -5,7 +5,7 @@
 // 字典也称作映射、符号表或关联数组。
 
 import { defaultToString } from '../util'
-import { ValuePair } from './models/value-pair'
+import { ValuePair } from '../models/value-pair'
 
 /**
  * 字典
