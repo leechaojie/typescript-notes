@@ -77,4 +77,40 @@ export default class HashTable<K, V> {
     return false
   }
 
+  /**
+   * 检查散列表是否为空
+   */
+  public isEmpty(): boolean {
+    return this.size() === 0
+  }
+
+  /**
+   * 返回散列表元素个数
+   */
+  public size(): number {
+    return Object.keys(this.table).length
+  }
+
+  /**
+   * 清空散列表
+   */
+  public clear() {
+    this.table = {}
+  }
+
+  /**
+   * 将散列表转化为字符串
+   */
+  public toString(): string {
+    if (this.isEmpty()) {
+      return ''
+    }
+    const keys = Object.keys(this.table)
+    let objString = `{${keys[0]} => ${this.table[keys[0]].toString()}}`
+    for (let i = 1; i < keys.length; i++) {
+      objString = `${objString}, {${keys[i]} => ${this.table[keys[i]].toString()}}`
+    }
+    return objString
+  }
+
 }
