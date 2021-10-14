@@ -37,6 +37,28 @@ export default class HashTable<K, V> {
 
   }
 
+
+  /**
+   * 最受社区推崇的散列函数
+   * 在将键转化为字符串之后(行{1})，
+   * djb2HashCode 方法包括初始化一个 hash 变量并赋值 为一个质数(行{2}——大多数实现都使用 5381)，
+   * 然后迭代参数 key(行{3})，将 hash 与 33 相乘(用作一个幻数)，并和当前迭代到的字符的 ASCII 码值相加(行{4})。
+   * 最后，我们将使用相加的和与另一个随机质数相除的余数(行{5})，比我们认为的散列表大小要大。
+   * 在本例中，我们认为散列表的大小为 1000。
+   */
+  public djb2HashCode(key: K): number {
+    if (typeof key === 'number') {
+      return key
+    }
+    const tableKey = this.toStrFn(key) // {1}
+    let hash = 5381 // {2}
+    for (let i = 0; i < tableKey.length; i++) { // {3}
+      hash = (hash * 33) + tableKey.charCodeAt(i) // {4}
+    }
+    return hash % 1013 // {5}
+  }
+
+
   /**
    * 获取 key 的 hashCode
    */
