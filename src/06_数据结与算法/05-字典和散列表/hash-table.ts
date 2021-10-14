@@ -50,6 +50,7 @@ export default class HashTable<K, V> {
   public put(key: K, value: V): boolean {
     if (key !== undefined && value !== undefined) {
       const position = this.hashCode(key)
+      // 传入的 position 相同的话，会被覆盖
       this.table[position] = new ValuePair(key, value)
       return true
     }
