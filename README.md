@@ -1,6 +1,8 @@
 # typescript-notes
 
-Spare time TypeScript and JavaScript Data Structures and Algorithms study notes
+TypeScript and JavaScript Data Structures and Algorithms Study Notes
+
+Data structures and algorithms use ts, I will try to avoid using `any` type
 
 ## install
 
