@@ -83,3 +83,38 @@ console.log('level', palindromeChecker('level'))
 console.log('Was it a car or a cat I saw', palindromeChecker('Was it a car or a cat I saw'))
 console.log('Step on no pets', palindromeChecker('Step on no pets'))
 console.log('hello world', palindromeChecker('hello world'))
+
+
+console.log('-------------二叉搜索树')
+import BinarySearchTree from "./07-树/binary-search-tree"
+const tree = new BinarySearchTree()
+tree.insert(11)
+tree.insert(7)
+tree.insert(15)
+tree.insert(5)
+tree.insert(3)
+tree.insert(9)
+tree.insert(8)
+tree.insert(10)
+tree.insert(13)
+tree.insert(12)
+tree.insert(14)
+tree.insert(20)
+tree.insert(18)
+tree.insert(25)
+tree.insert(6)
+
+const printNode = (value: number) => console.log(value)
+console.log('-----中序遍历')
+tree.inOrderTraverse(printNode)
+console.log('-----先序遍历')
+tree.preOrderTraverse(printNode)
+console.log('-----后序遍历')
+tree.postOrderTraverse(printNode)
+
+console.log('min', tree.min())
+console.log('max', tree.max())
+
+console.log('remove', tree.remove(11))
+console.log('tree', tree)
+
