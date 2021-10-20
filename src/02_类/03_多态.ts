@@ -5,14 +5,14 @@
 
 (() => {
   class Animal {
-		name: string
-		constructor(name: string) {
+    name: string
+    constructor(name: string) {
 		  this.name = name
-		}
-		run(distance: number = 0) {
+    }
+    run(distance: number = 0) {
 		  const run = `${this.name}跑了${distance}米`
 		  console.log(run)
-		}
+    }
   }
   class Dog extends Animal {
     constructor(name: string) {

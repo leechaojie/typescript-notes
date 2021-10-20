@@ -10,23 +10,23 @@
 		gender: string
 	}
 	class Person {
-		_name: string
-		_age: number
-		_gender: string
-		constructor({
+	  _name: string
+	  _age: number
+	  _gender: string
+	  constructor({
 		  name,
 		  age,
 		  gender
-		}: IPerson) {
+	  }: IPerson) {
 		  this._name = name
 		  this._age = age
 		  this._gender = gender
-		}
-		// 定义实例方法
-		seyHi(str: string) {
+	  }
+	  // 定义实例方法
+	  seyHi(str: string) {
 		  const hi = `hello, 我是${this._name},我今年${this._age},我的性别是${this._gender}, ${str}`
 		  console.log(hi)
-		}
+	  }
 	}
 
 	class Student extends Person {
