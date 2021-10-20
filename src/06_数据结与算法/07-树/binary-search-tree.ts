@@ -8,9 +8,19 @@ import { Node } from "../models/tree-models"
  */
 export default class BinarySearchTree<T> {
   private root: Node<T> | null
-  constructor(private compareFn: ICompareFunction<T> = defaultCompare) {
+  constructor() {
     this.root = null
   }
+
+  /**
+   * 比较树的两个节点大小
+   * @param a
+   * @param b
+   * @return LESS_THAN a < b
+   * @return BIGGER_THAN a > b
+   * @return EQUALS a = b
+   */
+  private compareFn: ICompareFunction<T> = defaultCompare
 
   /**
    * 向二叉搜索树中插入一个键
@@ -142,5 +152,77 @@ export default class BinarySearchTree<T> {
       current = current.right
     }
     return current
+  }
+
+  /**
+   * 搜索一个特定的值
+   * @param key 需要搜索的值
+   * @returns true 存在 false 不存在
+   */
+  public search(key: T) {
+    return this.searchNode(this.root, key)
+  }
+
+  /**
+   * 寻找一棵树或其任意子树中的一个特定的值
+   * @param node 树/子树的根节点
+   * @param key 需要搜索的值
+   * @returns
+   */
+  private searchNode(node: Node<T> | null, key: T): boolean {
+    if (node === null) {
+      return false
+    }
+    // 比较节点大小
+    if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
+      return this.searchNode(node.left, key)
+    } else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+      return this.searchNode(node.right, key)
+    } else {
+      return true
+    }
+  }
+
+  /**
+   * 移除节点
+   * @param key 需要一处的值
+   */
+  public remove(key: T) {
+    this.root = this.removeNode(this.root, key)
+  }
+
+  private removeNode(node: Node<T> | null, key: T): null | Node<T> {
+    if (node === null) {
+      return null
+    }
+    if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
+      node.left = this.removeNode(node.left, key)
+      return node
+    } else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+      node.right = this.removeNode(node.right, key)
+      return node
+    } else {
+      // 1 第一种情况: 该节点是一个没有左侧或右侧子节点的叶节点
+      if (node.left === null && node.right === null) {
+        node = null
+        return node
+      }
+
+      // 2 移除有一个左侧或右侧子节点的节点
+      if (node.left === null) {
+        node = node.right
+        return node
+      } else if (node.right === null) {
+        node = node.left
+        return node
+      }
+
+      // 3 移除有两个子节点的节点
+      // aux 右边子树中最小的节点
+      const aux = this.minNode(node.right);
+      (node as Node<T>).key = (aux?.key as T)
+      node.right = this.removeNode(node.right, aux?.key as T)
+      return node
+    }
   }
 }
