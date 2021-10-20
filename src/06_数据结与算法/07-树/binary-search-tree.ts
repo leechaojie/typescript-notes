@@ -7,7 +7,7 @@ import { Node } from "../models/tree-models"
  * 二叉搜索树
  */
 export default class BinarySearchTree<T> {
-  private root: Node<T> | null
+  protected root: Node<T> | null
   constructor() {
     this.root = null
   }
@@ -20,7 +20,7 @@ export default class BinarySearchTree<T> {
    * @return BIGGER_THAN a > b
    * @return EQUALS a = b
    */
-  private compareFn: ICompareFunction<T> = defaultCompare
+  protected compareFn: ICompareFunction<T> = defaultCompare
 
   /**
    * 向二叉搜索树中插入一个键
@@ -125,7 +125,7 @@ export default class BinarySearchTree<T> {
    * @param node
    * @returns
    */
-  private minNode(node: Node<T> | null): Node<T> | null {
+  protected minNode(node: Node<T> | null): Node<T> | null {
     let current = node
     while (current != null && current.left != null) {
       current = current.left
@@ -146,7 +146,7 @@ export default class BinarySearchTree<T> {
      * @param node
      * @returns
      */
-  private maxNode(node: Node<T> | null): Node<T> | null {
+  protected maxNode(node: Node<T> | null): Node<T> | null {
     let current = node
     while (current !== null && current.right !== null) {
       current = current.right
@@ -191,7 +191,7 @@ export default class BinarySearchTree<T> {
     this.root = this.removeNode(this.root, key)
   }
 
-  private removeNode(node: Node<T> | null, key: T): null | Node<T> {
+  protected removeNode(node: Node<T> | null, key: T): null | Node<T> {
     if (node === null) {
       return null
     }
