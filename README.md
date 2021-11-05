@@ -1,5 +1,7 @@
 # typescript-notes
 
+English ｜ [简体中文](./README.zh-CN.md)
+
 TypeScript and JavaScript Data Structures and Algorithms Study Notes
 
 Data structures and algorithms use ts, I will try to avoid using `any` type
