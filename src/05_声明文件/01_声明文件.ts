@@ -8,9 +8,9 @@
  */
 
 // 引入jQuery库
-import jQuery from 'jquery'
+// import jQuery from 'jquery'
 
 // npm install @types/jquery --save-dev 的声明文件安装后，就不会报错，有了提示信息
-jQuery('add')
+// jQuery('add')
 
 // jquery.d.ts 简单的jQuery声明文件
