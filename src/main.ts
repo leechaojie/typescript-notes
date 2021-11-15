@@ -23,6 +23,7 @@ console.log(`%c${process.env.NODE_ENV}`, 'color: #fff; background-color: #347981
 // import './03_函数/02_可选参数与默认参数.ts'
 // import './03_函数/03_剩余参数.ts'
 // import './03_函数/04_函数重载.ts'
+// import './03_函数/05_命名空间.ts'
 
 // import './04_范型/01_范型.ts'
 // import './04_范型/02_多个范型参数.ts'
