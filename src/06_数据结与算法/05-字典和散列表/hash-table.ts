@@ -137,13 +137,3 @@ export default class HashTable<K, V> {
   }
 
 }
-
-const hashTable = new HashTable<string, string>()
-
-hashTable.put('Nathan', 'one')
-hashTable.put('Sargeras', 'two')
-hashTable.put('Sue', 'three')
-hashTable.put('Aethelwulf', 'four')
-hashTable.put('5leeString', 'five')
-
-console.log('-=-=-=-=-=', hashTable.toString())
