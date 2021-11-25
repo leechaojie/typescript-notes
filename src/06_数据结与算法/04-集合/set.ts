@@ -67,7 +67,7 @@ export default class Set<T> {
   }
 
   /**
-   * 并集
+   * 并集 A ∪ B
    * @param otherSet 需要合并的集合
    * @returns
    */
@@ -79,7 +79,7 @@ export default class Set<T> {
   }
 
   /**
-   * 交集
+   * 交集 A ∩ B
    * @param otherSet
    * @returns
    */
@@ -102,7 +102,7 @@ export default class Set<T> {
   }
 
   /**
-   * 差集
+   * 差集 A - B
    * @param otherSet
    * @returns
    */
@@ -117,7 +117,7 @@ export default class Set<T> {
   }
 
   /**
-   * 子集
+   * 子集 A ⊂ B
    * @param otherSet
    * @returns
    */
