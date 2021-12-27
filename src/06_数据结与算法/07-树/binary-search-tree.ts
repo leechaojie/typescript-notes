@@ -39,7 +39,7 @@ export default class BinarySearchTree<T> {
    * @param node
    * @param key
    */
-  public insertNode(node: Node<T>, key: T) {
+  private insertNode(node: Node<T>, key: T) {
     // 新节点是否小于跟节点
     if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
       if (node.left === null) { // 基线条件
