@@ -31,10 +31,5 @@ console.log(`%c${process.env.NODE_ENV}`, 'color: #fff; background-color: #347981
 // import './04_范型/04_范型约束.ts'
 
 // import './05_声明文件/01_声明文件.ts'
-// import './05_声明文件/02_内置对象.ts'
+import './05_声明文件/02_内置对象.ts'
 
-// import './06_数据结与算法/01-栈/stack.ts'
-// import './06_数据结与算法/02-队列/queue.ts'
-// import './06_数据结与算法/02-队列/deque.ts'
-import './06_数据结与算法/05-字典和散列表/hash-table'
-// import './06_数据结与算法/example.ts'
